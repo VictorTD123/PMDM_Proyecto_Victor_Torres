@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Este es el contenedor principal de mi pantalla para reservar una cita. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReservarCitaActivity">
+
+    <!-- Aquí pongo el título principal de la pantalla, 'Elige el día'. -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/title_choose_day"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Este es mi botón con el icono del calendario, que uso para abrir el selector de fecha. -->
+    <ImageButton
+        android:id="@+id/btnSeleccionarFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/title_choose_day"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_calendar_month_foreground"
+        app:layout_constraintBottom_toBottomOf="@+id/etFechaSeleccionada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etFechaSeleccionada" />
+
+    <!-- Uso este campo de texto para mostrar la fecha que he elegido. -->
+    <EditText
+        android:id="@+id/etFechaSeleccionada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:hint="@string/hint_date_format"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSeleccionarFecha"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <!-- Esta es la etiqueta que está encima de la rejilla de horas. -->
+    <TextView
+        android:id="@+id/tvCitasDisponibles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/label_available_appointments"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/btnSeleccionarFecha"
+        app:layout_constraintTop_toBottomOf="@+id/etFechaSeleccionada" />
+
+    <!-- Aquí es donde se mostrará la tabla con todas las horas, marcando las que están libres y ocupadas. -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHoras"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbarbotones"
+        app:layout_constraintEnd_toEndOf="@+id/etFechaSeleccionada"
+        app:layout_constraintStart_toStartOf="@+id/tvCitasDisponibles"
+        app:layout_constraintTop_toBottomOf="@+id/tvCitasDisponibles" />
+
+    <!-- Esta es la Toolbar, la misma que uso en las otras pantallas. -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarbotones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.Material3.ActionBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Contenedor principal de la pantalla de inicio de sesión. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- La barra superior que contiene el menú para cambiar de idioma. -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_idioma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="4dp"
+        app:theme="@style/ThemeOverlay.Material3.ActionBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Muestra el logo principal de la aplicación en la pantalla. -->
+    <ImageView
+        android:id="@+id/imagenInicio"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_idioma"
+        app:srcCompat="@mipmap/ic_vitalfit_foreground" />
+
+    <!-- Un texto de bienvenida o subtítulo debajo del logo. -->
+    <TextView
+        android:id="@+id/txtvbienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Introduccion"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/imagenInicio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- El contenedor del campo de usuario, que muestra la etiqueta flotante "Usuario". -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/hint_username"
+        app:layout_constraintTop_toBottomOf="@+id/txtvbienvenida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- El campo de texto (deshabilitado) que solo sirve para dar la apariencia de un campo de usuario. -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- El contenedor del campo de contraseña, que muestra la etiqueta flotante y el icono del ojo. -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContraseña"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_password"
+        app:endIconMode="password_toggle"
+        app:layout_constraintTop_toBottomOf="@+id/tilUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- El campo de texto (deshabilitado) que solo sirve para dar la apariencia de un campo de contraseña. -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- El botón principal de acción para entrar en la aplicación. -->
+    <Button
+        android:id="@+id/btnUnirPantalla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_start"
+        android:backgroundTint="@color/button_orange" 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilContraseña"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <!-- Una capa invisible sobre el campo de usuario para capturar el clic y lanzar el toast. -->
+    <View
+        android:id="@+id/lanzar_toast_usuario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/tilUsuario"
+        app:layout_constraintBottom_toBottomOf="@id/tilUsuario"
+        app:layout_constraintStart_toStartOf="@id/tilUsuario"
+        app:layout_constraintEnd_toEndOf="@id/tilUsuario" />
+
+    <!-- Una capa invisible sobre el campo de contraseña para capturar el clic y lanzar el toast. -->
+    <View
+        android:id="@+id/lanzar_toast_contrasena"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/tilContraseña"
+        app:layout_constraintBottom_toBottomOf="@id/tilContraseña"
+        app:layout_constraintStart_toStartOf="@id/tilContraseña"
+        app:layout_constraintEnd_toEndOf="@id/tilContraseña" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
