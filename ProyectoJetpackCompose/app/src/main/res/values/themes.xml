@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema basado en AppCompat para asegurar compatibilidad con el arranque de la Activity -->
+    <style name="Theme.ProyectoFinal" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Color de la barra de estado -->
+        <item name="android:statusBarColor">@color/vital_fit_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">ProyectoFinal</string>
+    <string name="Introduccion">el inicio de una nueva etapa</string>
+    <string name="que_es_vitalfit">¿Qué es VitalFit?</string>
+
+    <!-- Textos del menú principal -->
+    <string name="menu_item_profile">Perfil</string>
+    <string name="menu_item_book_appointment">Reservar Cita</string>
+    <string name="menu_item_my_progress">Mi progreso</string>
+    <string name="menu_item_buy_material">Comprar Material</string>
+
+    <!-- Textos de la pantalla Acerca De -->
+    <string name="acerca_de_toolbar_title">Acerca de VitalFit</string>
+    <string name="acerca_de_card_title">VitalFit</string>
+    <string name="acerca_de_card_content">VitalFit es un proyecto orientado a la readaptación de lesiones y patologías, así como al acondicionamiento físico genérico.\n\nLa población diana son los pacientes del Hospital de Ciudad Real y sus trabajadores. Actualmente, solo disponemos de una sala que se encuentra en la Planta 1, habitación 22. Reserva una cita y estaremos 45 minutos haciendo readaptación.\n\nAdemás, esta empresa se complementará con la comercialización de material de entrenamiento a un precio económico.</string>
+
+    <!-- Textos generales y botones -->
+    <string name="button_start">Comenzamos</string>
+    <string name="title_choose_day">Elige el día</string>
+    <string name="label_available_appointments">Citas disponibles:</string>
+    <string name="hint_date_format">DD/MM/AAAA...</string>
+    <string name="title_mis_citas">Mis citas reservadas</string>
+    <string name="hint_username">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="title_inicio">INICIO</string>
+    <string name="label_detalles_cita">Detalles de la cita:</string>
+    <string name="label_fecha_cita">Fecha de la cita:</string>
+    <string name="label_hora_cita">Hora de la cita:</string>
+
+    <!-- Textos de menús de Toolbar -->
+    <string name="menu_language_spanish">Español</string>
+    <string name="menu_language_english">Inglés</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_my_appointments">Mis Citas</string>
+    <string name="menu_button3">Botón 3</string>
+    <string name="menu_button4">Botón 4</string>
+
+    <!-- Mensajes (Toasts) -->
+    <string name="toast_coming_soon_my_appointments">Próximamente: Mis Citas</string>
+    <string name="toast_feature_pending">Funcionalidad pendiente</string>
+    <string name="toast_temporarily_unavailable">No disponible temporalmente</string>
+</resources>

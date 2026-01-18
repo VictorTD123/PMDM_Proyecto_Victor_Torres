@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Color primario de la aplicación -->
+    <color name="vital_fit_primary">#388E3C</color>
+
+    <!-- Colores para el estado de las horas -->
+    <color name="hora_libre">#C8E6C9</color> <!--  verde  -->
+    <color name="hora_ocupada">#FFCDD2</color> <!-- rojo  -->
+
+    <!-- Color para botones de acción -->
+    <color name="button_orange">#FF9800</color>
+</resources>

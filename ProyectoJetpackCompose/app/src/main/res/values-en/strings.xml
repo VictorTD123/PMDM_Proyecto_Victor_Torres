@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">VitalFit Project</string>
+    <string name="Introduccion">The beginning of a new stage</string>
+    <string name="que_es_vitalfit">What is VitalFit?</string>
+
+    <!-- Main menu texts -->
+    <string name="menu_item_profile">Profile</string>
+    <string name="menu_item_book_appointment">Book Appointment</string>
+    <string name="menu_item_my_progress">My progress</string>
+    <string name="menu_item_buy_material">Buy Material</string>
+
+    <!-- About screen texts -->
+    <string name="acerca_de_toolbar_title">About VitalFit</string>
+    <string name="acerca_de_card_title">VitalFit</string>
+    <string name="acerca_de_card_content">VitalFit is a project oriented to the rehabilitation of injuries and pathologies, as well as generic physical conditioning.\n\nThe target population are the patients of the Ciudad Real Hospital and its workers. Currently, we only have one room located on Floor 1, room 22. Book an appointment and we will be doing rehabilitation for 45 minutes.\n\nIn addition, this company will be complemented with the commercialization of training material at an economic price.</string>
+
+    <!-- General texts and buttons -->
+    <string name="button_start">Let\'s start</string>
+    <string name="title_choose_day">Choose the day</string>
+    <string name="label_available_appointments">Available appointments:</string>
+    <string name="hint_date_format">DD/MM/YYYY...</string>
+    <string name="title_mis_citas">My booked appointments</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="title_inicio">HOME</string>
+    <string name="label_detalles_cita">Appointment details:</string>
+    <string name="label_fecha_cita">Appointment date:</string>
+    <string name="label_hora_cita">Appointment time:</string>
+
+    <!-- Menu texts -->
+    <string name="menu_language_spanish">Spanish</string>
+    <string name="menu_language_english">English</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_my_appointments">My Appointments</string>
+    <string name="menu_button3">Button 3</string>
+    <string name="menu_button4">Button 4</string>
+
+    <!-- Toasts -->
+    <string name="toast_coming_soon_my_appointments">Coming soon: My Appointments</string>
+    <string name="toast_feature_pending">Feature pending</string>
+    <string name="toast_temporarily_unavailable">Temporarily unavailable</string>
+</resources>
